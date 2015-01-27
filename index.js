@@ -1,22 +1,13 @@
-'use strict';
+'use strict'
 
-var GithubApi = require('github')
+var auth = require('./lib/authenticate');
 var repos = require('./lib/repos')
 var events = require('./lib/events')
 var pullRequests = require('./lib/pull-requests')
 
 module.exports = function githubStatusReport(user, callback) {
-  var github = new GithubApi({
-    version: '3.0.0'
-  })
-
-  github.authenticate({
-    type: 'oauth',
-    token: process.env.GITHUB_PERSONAL_TOKEN
-  })
-
   var options = {
-    github: github,
+    github: auth(),
     user: user,
     per_page: 100
   }
@@ -24,11 +15,14 @@ module.exports = function githubStatusReport(user, callback) {
   var data = {}
 
   repos(options, function(err, repos) {
+    data.repos = repos
+
     pullRequests(repos, options, function(err, pullRequests) {
       data.pullRequests = pullRequests
 
       events(options, function(err, events) {
         data.events = events
+
         callback(err, data)
       })
     })
