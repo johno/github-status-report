@@ -9,6 +9,7 @@ describe('github-status-report', function() {
       console.log(JSON.stringify(data, undefined, 2))
       assert.ok(!err)
       assert.ok(data)
+      done()
     })
   })
 })

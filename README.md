@@ -12,6 +12,14 @@ npm install --save github-status-report
 
 ## Usage
 
+This requires you to get an OAUTH token, and then export it as an environment variable:
+
+```bash
+export GITHUB_PERSONAL_TOKEN=my-magic-token
+```
+
+Once an OAUTH token is added as an environment variable, you're ready to go:
+
 ```javascript
 var githubStatusReport = require('github-status-report')
 
