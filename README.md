@@ -2,7 +2,9 @@
 
 [![Build Status](https://secure.travis-ci.org/johnotander/github-status-report.png?branch=master)](https://travis-ci.org/johnotander/github-status-report)
 
-Generate a status report from your Github activity.
+_Currently under development._
+
+Generate a status report from your Github activity, because lazy.
 
 ## Installation
 
