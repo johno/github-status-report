@@ -14,7 +14,8 @@ npm install --save github-status-report
 
 ## Usage
 
-This requires you to get an OAUTH token, and then export it as an environment variable:
+This requires you to get an [OAUTH token](https://github.com/settings/tokens/new),
+and then export it as an environment variable:
 
 ```bash
 export GITHUB_PERSONAL_TOKEN=my-magic-token

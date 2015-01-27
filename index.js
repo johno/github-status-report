@@ -17,18 +17,11 @@ module.exports = function githubStatusReport(user, callback) {
 
   var options = {
     github: github,
-    user: user
+    user: user,
+    per_page: 100
   }
 
   var data = {}
-
-  // events(options, function(err, events) {
-  //   callback(err, events)
-  // })
-
-  // pullRequests(options, function(err, pullRequests) {
-  //   callback(err, pullRequests)
-  // })
 
   repos(options, function(err, repos) {
     pullRequests(repos, options, function(err, pullRequests) {
