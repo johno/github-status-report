@@ -1,0 +1,30 @@
+{
+  "name": "github-status-report",
+  "description": "Generate a status report from your Github activity.",
+  "author": "John Otander",
+  "version": "0.0.1",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnotander/github-status-report.git"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnotander/github-status-report/issues"
+  },
+  "homepage": "https://github.com/johnotander/github-status-report",
+  "dependencies": {
+    "github": "^0.2.3",
+    "t-d": "0.0.2"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
