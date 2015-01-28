@@ -1,8 +1,9 @@
 'use strict'
 
-var auth = require('./lib/authenticate');
+var auth = require('./lib/authenticate')
 var repos = require('./lib/repos')
 var events = require('./lib/events')
+var eventsReport = require('./lib/events-report')
 var pullRequests = require('./lib/pull-requests')
 
 module.exports = function githubStatusReport(user, callback) {
@@ -21,8 +22,7 @@ module.exports = function githubStatusReport(user, callback) {
       data.pullRequests = pullRequests
 
       events(options, function(err, events) {
-        data.events = events
-
+        data.events = events.all
         callback(err, data)
       })
     })
