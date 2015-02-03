@@ -6,7 +6,7 @@ describe('github-status-report', function() {
   it('should do something awesome', function(done) {
     this.timeout(60000);
     githubStatusReport('johnotander', function(err, data) {
-      console.log(JSON.stringify(data.repos, undefined, 2))
+      console.log(JSON.stringify(data.eventsReport, undefined, 2))
       assert.ok(!err)
       assert.ok(data)
       done()

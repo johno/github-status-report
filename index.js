@@ -23,6 +23,7 @@ module.exports = function githubStatusReport(user, callback) {
 
       events(options, function(err, events) {
         data.events = events.all
+        data.eventsReport = eventsReport(events.all)
         callback(err, data)
       })
     })
